@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.panels{
+    display: flex;
+    height: 100vh;
+}
+.panel{
+    flex: 1;
+    display: flex;
+    text-justify: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all .5s;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.panel:first-child{
+    background-image: url('https://picsum.photos/200/300?image=0');
+}
+.panel:nth-child(2){
+    background-image: url('https://picsum.photos/200/300?gravity=east');
+}
+.panel:nth-child(3){
+    background-image: url('https://picsum.photos/200/300?gravity=north');
+}
+.panel:nth-child(4){
+    background-image: url('https://picsum.photos/200/300?image=3');
+}
+.panel:nth-child(5){
+    background-image: url('https://picsum.photos/200/300?image=4');
+}
+.panel.open{
+    flex: 3;
+}
+.panel>*{
+    color: #fff;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+.panel>*:first-child{
+    margin-top: -100%;
+}
+.panel>*:last-child{
+    margin-bottom: -100%;
+}
+.panel.open>*:first-child{
+    margin-top: 0;
+}
+.panel.open>*:last-child{
+    margin-bottom: 0;
+}
