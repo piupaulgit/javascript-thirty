@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --padding: 5px;
+    --background-color: blue;
+    --blur: 2px;
+}
+.wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.test-div{
+    padding: var(--padding);
+    background-color: var(--background-color);
+}
+.test-img{
+    filter: blur(var(--blur));
+}
+h2{
+    color: var(--background-color);
+}
